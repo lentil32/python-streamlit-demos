@@ -27,23 +27,16 @@ To set up and run the Python Projects Streamlit Demo applications locally, follo
   cd python-streamlit-demos
 #+END_SRC
 
-*** Create a Virtual Environment (Optional but Recommended)
-#+BEGIN_SRC shell
-  python3 -m venv .venv
-  source .venv/bin/activate
-#+END_SRC
-
 *** Install Dependencies
 #+BEGIN_SRC shell
-  pip install -r requirements.txt
+  make setup
 #+END_SRC
 
 ** Usage
 
 *** Running Demo
-
 #+BEGIN_SRC shell
-  streamlit run app.py
+  make run
 #+END_SRC
 
 ** FAQ
