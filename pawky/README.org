@@ -1,4 +1,13 @@
-* PAWKY - AWK Interpreter Written in Python
+#+TITLE: Pawky - AWK Interpreter Written in Python
+#+AUTHOR: lentil32
+#+DATE: 2024-10-14
+#+EMAIL: lentil32@icloud.com
+#+URL: https://github.com/lentil32/pawky
+#+DESCRIPTION: AWK language interpreter written in Python
+
+Demo: https://lentil32-demo.streamlit.app/
+
+** Overview
 This library is an interpreter for a small subset of the AWK language.
 
 ** Install and use

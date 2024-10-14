@@ -14,8 +14,8 @@ logging.basicConfig(filename='app.log',
 logger = logging.getLogger(__name__)
 
 PROJECT_1 = {
-    "title": "PAWKY - AWK Interpreter in Python",
-    "description": "**PAWKY** is an AWK interpreter written in Python.",
+    "title": "Pawky - AWK Interpreter in Python",
+    "description": "**Pawky** is an AWK interpreter written in Python.",
     "repository": "https://github.com/lentil32/pawky"
 }
 
