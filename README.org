@@ -13,6 +13,7 @@ applications that demonstrate my Python projects.
 
 ** Available Demos
 - [[https://github.com/lentil32/pawky][Pawky - AWK Interpreter in Python]]
+- And some simple scripts...
 
 ** Installation
 

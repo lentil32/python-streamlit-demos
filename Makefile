@@ -11,6 +11,10 @@ setup: clean
 	./$(VENV)/bin/python -m pip install --upgrade pip
 	./$(VENV)/bin/python -m pip install -r requirements.txt
 
+test:
+	./$(VENV)/bin/python pawky/test.py
+	./$(VENV)/bin/python pregexy/test.py
+
 format:
 	yapf -ir .
 

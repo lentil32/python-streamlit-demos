@@ -4,6 +4,7 @@ from contextlib import redirect_stdout
 
 import streamlit as st
 
+import pregexy
 from pawky import AWKInterpreter
 
 # Configure logging
@@ -17,6 +18,15 @@ PROJECT_1 = {
     "title": "Pawky - AWK Interpreter in Python",
     "description": "**Pawky** is an AWK interpreter written in Python.",
     "repository": "https://github.com/lentil32/pawky"
+}
+
+PROJECT_2 = {
+    "title":
+    "LC0010. Regular Expression Matching",
+    "description":
+    "My Python solution for LC0010",
+    "repository":
+    "https://github.com/lentil32/python-streamlit-demos/blob/main/pregexy/pregexy.py"
 }
 
 
@@ -103,12 +113,60 @@ f1,f2,null
             st.info("No output generated.")
 
 
+def run_pregexy():
+    st.title(PROJECT_2["title"])
+    st.markdown(PROJECT_2["description"], unsafe_allow_html=True)
+    st.markdown(f"[Code]({PROJECT_2['repository']})")
+
+    st.header("Text to Compare")
+    text = st.text_area(
+        "Enter text to compare:",
+        "mississippiabbcacbbbbbabcbacaaccbabbacbbbacbcbaacacaaccbaabcbaabcbcbcaccbcaabc",
+        height=100)
+
+    st.header("Pattern")
+    pattern = st.text_area(
+        "Enter pattern:",
+        "mis*is*ip*.a*a*.*a*.*a*.b*a*a*.*b*c*b*b*.*ac*.*bc*a*.*a*aa*.*b*.c*.*a*",
+        height=100)
+
+    if st.button("Run"):
+        # Input Validation
+        if not text.strip():
+            st.error("Please enter an text to compare.")
+            return
+        if not pattern.strip():
+            st.error("Please enter a pattern.")
+            return
+
+        max_text_length = 1000
+        max_pattern_length = 1000
+
+        if len(text) > max_text_length:
+            st.error(
+                f"Text is too long. Maximum allowed length is {max_text_length} characters."
+            )
+            return
+        if len(pattern) > max_pattern_length:
+            st.error(
+                f"Pattern is too long. Maximum allowed length is {max_pattern_length} characters."
+            )
+            return
+
+        output = pregexy.is_match(text, pattern)
+        st.subheader("Output")
+        st.code(output, language='text')
+
+
 def main():
     st.sidebar.title("lentil32 Dashboard")
-    app_mode = st.sidebar.radio("Demos", [PROJECT_1["title"]])
+    app_mode = st.sidebar.radio("Demos",
+                                [PROJECT_1["title"], PROJECT_2["title"]])
 
     if app_mode == PROJECT_1["title"]:
         run_pawky()
+    elif app_mode == PROJECT_2["title"]:
+        run_pregexy()
     else:
         st.error("Unknown option selected.")
 
