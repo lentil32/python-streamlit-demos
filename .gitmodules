@@ -1,6 +1,0 @@
-[submodule "awk"]
-	path = awk
-	url = git@github.com:lentil32/pawky.git
-[submodule "pawky"]
-	path = pawky
-	url = git@github.com:lentil32/pawky.git

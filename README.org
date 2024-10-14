@@ -43,3 +43,8 @@ To set up and run the Python Projects Streamlit Demo applications locally, follo
 #+BEGIN_SRC shell
   streamlit run app.py
 #+END_SRC
+
+** FAQ
+*** Q1. Why don't you use ~git submodule~ to manage projects?
+Streamlit Community Cloud does not support submodule for now.
+Reference: [[https://discuss.streamlit.io/t/unable-to-deploy-app-when-using-git-submodule/6352][Unable to deploy app when using git submodule - Community Cloud - Streamlit]]

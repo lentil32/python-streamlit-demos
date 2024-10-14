@@ -18,7 +18,7 @@ narwhals==1.9.3
 numpy==2.1.2
 packaging==24.1
 pandas==2.2.3
--e git+ssh://git@github.com/lentil32/pawky.git@4c5460d635bac54870b4c51ac098dd94af8ffe05#egg=PAWKY&subdirectory=../../pawky
+-e ./pawky
 pillow==10.4.0
 ply==3.11
 protobuf==5.28.2

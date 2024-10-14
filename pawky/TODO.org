@@ -1,0 +1,7 @@
+* Tasks [0/5]
+** TODO Sanitize code redundancies in `test.py`
+** TODO Add stdin/stdout testing using my testing script:
+https://gist.github.com/lentil32/0ad5dae12d590010357c6becdfc53d06
+** TODO Add `pytest` for unit testing
+** TODO Create test cases using built-in AWK
+** TODO Add testing with Python subprocess running AWK to compare outputs

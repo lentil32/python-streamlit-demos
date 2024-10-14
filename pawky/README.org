@@ -1,0 +1,42 @@
+* PAWKY - AWK Interpreter Written in Python
+This library is an interpreter for a small subset of the AWK language.
+
+** Install and use
+#+begin_src Makefile
+  git clone https://github.com/lentil32/pawky.git
+  make install
+#+end_src
+
+#+begin_src python
+  from pawky import AWKInterpreter
+
+  awk_script = "<AWK script>"  # Input your script
+
+  interpreter = AWKInterpreter(awk_script)
+  interpreter.set_input(input_data)
+  interpreter.run()
+#+end_src
+
+For more information, please refer to ~test.py~.
+** Features
+- [X] BEGIN, END blocks
+- [X] Separators: FS, OFS, RS, ORS
+- [X] Variable assignments with operators e.g., ~=~, ~+=~, ~-=~, ~*=~, ~/=~, ~%=~
+- [X] Print statement for multiple expressions
+- [X] Control structures e.g., if-else statements, for loops, break statements
+- [X] Field variables e.g., ~$0~, ~$1~, ~$2~
+- [X] Basic arithmetic operations e.g., ~+~, ~-~, ~*~, ~/~, ~%~
+- [X] Unary operations e.g., ~!~, ~-~
+- [ ] ~printf~ function
+- [ ] Regex matching for patterns
+- [ ] Associative arrays
+- [ ] Built-in functions e.g., ~length()~, ~substr()~, ~tolower()~, ~toupper()~
+- [ ] Defining functions
+- [ ] String concatenation
+- [ ] Comments
+
+** Setup and run tests for development
+#+begin_src Makefile
+  make setup
+  make test
+#+end_src
