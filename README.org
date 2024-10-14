@@ -1,0 +1,45 @@
+#+TITLE: Python Projects Streamlit Demo
+#+AUTHOR: lentil32
+#+DATE: 2024-10-14
+#+EMAIL: lentil32@icloud.com
+#+URL: https://github.com/lentil32/python-streamlit-demos
+#+DESCRIPTION: Streamlit Demo Page for My Python Projects
+
+** Overview
+This repository serves as a centralized hub for interactive Streamlit
+applications that demonstrate my Python projects.
+
+** Available Demos
+- PAWKY - AWK Interpreter in Python
+
+** Installation
+
+To set up and run the Python Projects Streamlit Demo applications locally, follow the steps below.
+
+*** Prerequisites
+- Python 3.7 or higher
+
+*** Clone the Repository
+#+BEGIN_SRC shell
+  git clone https://github.com/lentil32/python-streamlit-demos.git
+  cd python-streamlit-demos
+#+END_SRC
+
+*** Create a Virtual Environment (Optional but Recommended)
+#+BEGIN_SRC shell
+  python3 -m venv .venv
+  source .venv/bin/activate
+#+END_SRC
+
+*** Install Dependencies
+#+BEGIN_SRC shell
+  pip install -r requirements.txt
+#+END_SRC
+
+** Usage
+
+*** Running Demo
+
+#+BEGIN_SRC shell
+  streamlit run app.py
+#+END_SRC
