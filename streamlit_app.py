@@ -16,7 +16,8 @@ logger = logging.getLogger(__name__)
 
 PROJECT_1 = {
     "title": "Pawky - AWK Interpreter in Python",
-    "description": "**Pawky** is an AWK interpreter written in Python.",
+    "description":
+    "**Pawky** is an interpreter for a small subset of the AWK language written in Python",
     "repository": "https://github.com/lentil32/pawky"
 }
 
@@ -44,28 +45,32 @@ BEGIN {
 
 {
     defected = 0;
-    for (i = 1; i <= NF; ++i) {
-        if ($i == "NULL") {
-            defected = 1;
-            break;
+    if ($3 < 3) {
+        defected = 1;
+    } else {
+        for (i = 1; i <= NF; ++i) {
+            if ($i == "NULL") {
+                defected = 1;
+                break;
+            }
         }
     }
     if (!defected)
         print $0;
 }
-    """,
+""",
                               height=400)
 
     st.header("Input Data")
     input_data = st.text_area("Enter input data:",
                               """\
-a1,a2,a3
-b1,b2,b3
-c1,c2,c3
-d1,NULL,d3
-NILL,e2,e3
-f1,f2,null
-    """,
+a1,a2,7
+b1,b2,0
+c1,c2,11
+d1,NULL,24
+NILL,e2,1
+f1,null,3
+""",
                               height=250)
 
     if st.button("Run Interpreter"):
